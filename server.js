@@ -41,13 +41,14 @@ app.get('/', (req, res) => {
     };
     axios(config)
     .then(function (response) {
-        url = JSON.stringify(response.data);
+       res.send(JSON.stringify(response.data))
     })
     .catch(function (error) {
         console.log(error);
+        res.send(url);
     });
 
-    res.send(url);
+    
 
 })
 
