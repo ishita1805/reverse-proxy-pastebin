@@ -47,10 +47,20 @@ app.get('/', (req, res) => {
         console.log(error);
         res.send(url);
     });
-
-    
-
 })
+
+
+app.get('/getraw', (req, res) => {
+    axios.get(`https://pastebin.com/raw/${req.query.data}`)
+    .then(function (response) {
+       res.send(JSON.stringify(response.data));
+    })
+    .catch(function (error) {
+        console.log(error);
+        res.send('error occured');
+    });
+})
+
 
 app.listen(port, ()=>{
     console.log(port);
