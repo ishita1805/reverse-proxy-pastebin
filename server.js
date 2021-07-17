@@ -13,6 +13,12 @@ app.use(express.urlencoded());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
 
+app.get('/health', (req, res) => {
+    res.json({
+        status:'okay'
+    })
+})
+
 
 app.get('/', (req, res) => {
     // req.query.data
