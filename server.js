@@ -29,7 +29,6 @@ app.get('/', (req, res) => {
         'api_option': 'paste',
         'api_paste_private':0,
         'api_paste_expire_date':'N',
-        'api_paste_format':'html',
     });
 
     var config = {
