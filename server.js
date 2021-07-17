@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
     // req.query.data
     let url = 'limit exceeded';
     var data = qs.stringify({
-        'api_dev_key': 'ToZZRZRjzGrf_WgfpfZkh9_GhhZXpxgv',
+        'api_dev_key': 'fcxOIK_JUBZ-iG6lkM5JdaoX44eLM1Bg',
         'api_paste_code': req.query.data,
         'api_option': 'paste',
         'api_paste_private':0,
